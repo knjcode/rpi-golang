@@ -19,9 +19,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 		wget \
 	&& rm -rf /var/lib/apt/lists/*
 
-ENV GOLANG_VERSION 1.8
+ENV GOLANG_VERSION 1.8.2
 ENV GOLANG_DOWNLOAD_URL https://golang.org/dl/go$GOLANG_VERSION.linux-armv6l.tar.gz
-ENV GOLANG_DOWNLOAD_SHA256 32553dbb342f74a821ed5069cb72ec7e135c031102e7d01c6bc4da8ad6df5202
+ENV GOLANG_DOWNLOAD_SHA256 a1942b2833e7d2685d7dbb7ac81c66125c351f24c7f006e8ae4a4283905257d1
 
 RUN curl -fsSL "$GOLANG_DOWNLOAD_URL" -o golang.tar.gz \
 	&& echo "$GOLANG_DOWNLOAD_SHA256  golang.tar.gz" | sha256sum -c - \
